@@ -17,7 +17,7 @@ function myFunction() {
   console.log(length);
   output.getRange(1,2,1,21).setValues(tranches);
   count = 0;
-  for (var i = 1; i <= 20; i++) {
+  for (var i = 1; i <= 50; i++) {
     refresh();
     // DO NOT change any values on the sheet or the data won't match !!!!!!
     profitPercentage = sheet.getRange('profitPercentage').getValue();
