@@ -111,9 +111,9 @@ function profitsSimulation() {
     console.log(gainDifferentials);
     count++;
   }
-  // Print profit percentages array in row 2, column 1 as y-axis key for gain differentials
+  // Print profit percentages array in row 2, column 1 as y-axis key for profit range
   output.getRange(2,1,count).setValues(profitPercentages);
-  // Print gain differentials array starting at row 2, column 2
+  // Print profit range array starting at row 2, column 2
   output.getRange(2,2,count,21).setValues(profitRange);
   // Print long rates array starting at row 2, column 23
   output.getRange(2,23,count).setValues(longRates);
