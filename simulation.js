@@ -63,6 +63,7 @@ function refresh() {
   } else {
     randomizer = false;
   }
+  // Flip checkbox to refresh values
   sheet.getRange('change').setValue(randomizer);
 }
 
@@ -84,10 +85,12 @@ function profitsSimulation() {
   tranches.push(sheet.getRange('tranches').getValues());
   var length = tranches.length * 21;
   console.log(length);
-  // Print tranch header to Output sheet
+  // Print tranch header to Profit Sheet
   output.getRange(1,2,1,21).setValues(tranches);
 
+  // Print the long rates to Profit Sheet
   output.getRange(1,23).setValue('Long Rates');
+
   // Count to determine cell ranges for when values are set on Output sheet
   count = 0;
   
